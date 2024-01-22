@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EshikOyna</title>
+    <link rel="preconnect" href="./HELR45W.ttf">
+    <link rel="preconnect" href="./Arial Rounded MT Regular.ttf">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            important: true,
+            theme: {
+                extend: {
+                    colors: {
+                        'blue1': '#2B6CB0',
+                        'medium-blue1': '#215387',
+                        'dark-blue': '#062a4d',
+                        'dark-blue1': '#212353',
+                        'dark-blue2': '#4A5568',
+                        'light-gray': '#f2f0f0',
+                        'dark-white': '#f5f5f5',
+                        'light-white': '#F7FAFC',
+                    },
+                    backgroundImage: {
+                        'hero': "url('./images/a01dxizyn5ije3kzn69r8yarjrzloxz5_c19p-sh_mnh4-dm.jpg')",
+                    },
+                    boxShadow: {
+                        '3xl': '1px 1px 20px 7px #E0E0E0',
+                    }
+                },
+                fontFamily: {
+                    'sans1': ['Helvetica'],
+                    'arial': ['Arial'],
+                    'mono': ['ui-monospace', 'SFMono-Regular', ],
+                    'display': ['Oswald', ],
+                    'body': ['"Open Sans"', ],
+                },
+                container: {
+                    center: true,
+                    padding: {
+                        DEFAULT: '3rem',
+                        sm: '0.3rem',
+                        lg: '3rem',
+                        xl: '3rem',
+                        '2xl': '0.3rem',
+                    },
+                },
+            }
+        }
+    </script>
+</head>
+
+<body class="font-bod dark:bg-black">
+    <header class="bg-light-gray dark:bg-black sticky top-0 z-10" id="main">
+        <div class="container flex justify-between py-3">
+            <div>
+                <img src="./images/cropped-photo_2023-04-05_12-46-59-removebg-preview.png" alt="logo"
+                    class="w-1/3 min-w-[84px] lg:w-2/5 inline-block dark:hidden duration-300">
+                <img src="./images/cropped-photo_2023-04-05_12-46-59-removebg-preview1.png" alt="logo"
+                    class="w-1/3 min-w-[84px] lg:w-2/5 hidden dark:inline-block duration-300">
+            </div>
+            <div class="flex gap-5 items-center">
+                <ul class="hidden lg:flex gap-5 items-start">
+                    <li>
+                        <a href="" class="after:absolute relative after:top-7 
+                        after:w-full after:h-[2px] after:bg-dark-blue 
+                        flex flex-col hover:text-blue1 dark:after:bg-white
+                        duration-300 pb-3 text-dark-blue dark:text-white font-semibold">
+                        Bosh sahifa
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="hover:after:-translate-x-0 after:scale-0 hover:after:scale-90 
+                        after:absolute relative after:top-7 
+                        after:duration-300 after:-translate-x-full
+                        after:w-full after:h-[2px] after:bg-blue1 flex flex-col hover:text-blue1 
+                        duration-300 pb-3 text-dark-blue font-semibold dark:text-white dark:after:bg-white">
+                            MAHSULOTLAR
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="hover:after:-translate-x-0 after:scale-0 hover:after:scale-90 
+                        after:absolute relative after:top-7 
+                        after:duration-300 after:-translate-x-full
+                        after:w-full after:h-[2px] after:bg-blue1 flex flex-col hover:text-blue1 
+                        duration-300 pb-3 text-dark-blue font-semibold dark:text-white dark:after:bg-white">
+                            ALOQA
+                        </a>
+                    </li>
+                    <li class="flex items-center h-max mt-1">
+                        <select name="" id="" class="rounded">
+                            <option value="" >UZ</option>
+                            <option value="">RU</option>
+                        </select>
+                    </li>
+                    <li>
+                        <button>
+                            <a href="tel:+998909089477"
+                                class="bg-white py-2 px-4 rounded-3xl hover:shadow-3xl duration-300 hover:text-dark-blue font-semibold">
+                                +998 90 908 94 77
+                            </a>
+                        </button>
+                    </li>
+                    <button id="theme-toggle" type="button"
+                        class="text-black dark:text-white rounded-lg text-sm duration-300 hidden lg:inline-block">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </ul>
+                <svg class="lg:hidden" fill="currentColor" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" id="open_burger">
+                    <path
+                        d="M24 21v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 13v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 5v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1z">
+                    </path>
+                </svg>
+                <button id="theme-toggle" type="button"
+                    class="text-black dark:text-white rounded-lg text-sm p-2.5 duration-300 inline-block lg:hidden">
+                    <svg id="theme-toggle-dark-icon" class="inline-block dark:hidden w-5 h-5" fill="currentColor"
+                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden dark:inline-block w-5 h-5" fill="currentColor"
+                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                            fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="hidden container" id="burger_anim">
+            <ul class="bg-dark-blue text-white fixed top-0 right-0 w-10/12 pt-5 pr-5 h-[100vh] z-50">
+                <div class="flex justify-end">
+                    <button class="w-6 h-6 relative" id="close_burger">
+                        <div class="!w-5 !h-[2px] rotate-[135deg] bg-white absolute"></div>
+                        <div class="!w-5 !h-[2px] rotate-45 bg-white"></div>
+                    </button>
+                </div>
+                <div class="px-10 pt-10t">
+                    <li class="border-b-white border-b-[1px] py-4 pl-1">BOSH SAHIFA</li>
+                    <li class="border-b-white border-b-[1px] py-4 pl-1">MAHSULOTLAR</li>
+                    <li class="border-b-white border-b-[1px] py-4 pl-1 mb-3">ALOQA</li>
+                    <li class="mb-3"><a href="tel:+998909089477"
+                            class="ml-0 md:ml-[80px] border-[1px] rounded-md text-sm py-1 px-3">+998 90 908 94 77</a></li>
+                    <li class="flex gap-2  ml-0 md:ml-[70px]">
+                        <a href="" class="bg-white p-1 rounded-md">
+                            <svg class="fill-dark-blue" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 32 32">
+                                <path
+                                    d="M31.997 15.999c0-8.836-7.163-15.999-15.999-15.999s-15.999 7.163-15.999 15.999c0 7.985 5.851 14.604 13.499 15.804v-11.18h-4.062v-4.625h4.062v-3.525c0-4.010 2.389-6.225 6.043-6.225 1.75 0 3.581 0.313 3.581 0.313v3.937h-2.017c-1.987 0-2.607 1.233-2.607 2.498v3.001h4.437l-0.709 4.625h-3.728v11.18c7.649-1.2 13.499-7.819 13.499-15.804z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="" class="bg-white p-1 rounded-md">
+                            <svg class="fill-dark-blue" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 32 32">
+                                <path
+                                    d="M21.138 0.242c3.767 0.007 3.914 0.038 4.65 0.144 1.52 0.219 2.795 0.825 3.837 1.821 0.584 0.562 0.987 1.112 1.349 1.848 0.442 0.899 0.659 1.75 0.758 3.016 0.021 0.271 0.031 4.592 0.031 8.916s-0.009 8.652-0.030 8.924c-0.098 1.245-0.315 2.104-0.743 2.986-0.851 1.755-2.415 3.035-4.303 3.522-0.685 0.177-1.304 0.26-2.371 0.31-0.381 0.019-4.361 0.024-8.342 0.024s-7.959-0.012-8.349-0.029c-0.921-0.044-1.639-0.136-2.288-0.303-1.876-0.485-3.469-1.784-4.303-3.515-0.436-0.904-0.642-1.731-0.751-3.045-0.031-0.373-0.039-2.296-0.039-8.87 0-2.215-0.002-3.866 0-5.121 0.006-3.764 0.037-3.915 0.144-4.652 0.219-1.518 0.825-2.795 1.825-3.833 0.549-0.569 1.105-0.975 1.811-1.326 0.915-0.456 1.756-0.668 3.106-0.781 0.374-0.031 2.298-0.038 8.878-0.038h5.13zM15.999 4.364v0c-3.159 0-3.555 0.014-4.796 0.070-1.239 0.057-2.084 0.253-2.824 0.541-0.765 0.297-1.415 0.695-2.061 1.342s-1.045 1.296-1.343 2.061c-0.288 0.74-0.485 1.586-0.541 2.824-0.056 1.241-0.070 1.638-0.070 4.798s0.014 3.556 0.070 4.797c0.057 1.239 0.253 2.084 0.541 2.824 0.297 0.765 0.695 1.415 1.342 2.061s1.296 1.046 2.061 1.343c0.74 0.288 1.586 0.484 2.825 0.541 1.241 0.056 1.638 0.070 4.798 0.070s3.556-0.014 4.797-0.070c1.239-0.057 2.085-0.253 2.826-0.541 0.765-0.297 1.413-0.696 2.060-1.343s1.045-1.296 1.343-2.061c0.286-0.74 0.482-1.586 0.541-2.824 0.056-1.241 0.070-1.637 0.070-4.797s-0.015-3.557-0.070-4.798c-0.058-1.239-0.255-2.084-0.541-2.824-0.298-0.765-0.696-1.415-1.343-2.061s-1.295-1.045-2.061-1.342c-0.742-0.288-1.588-0.484-2.827-0.541-1.241-0.056-1.636-0.070-4.796-0.070zM14.957 6.461c0.31-0 0.655 0 1.044 0 3.107 0 3.475 0.011 4.702 0.067 1.135 0.052 1.75 0.241 2.16 0.401 0.543 0.211 0.93 0.463 1.337 0.87s0.659 0.795 0.871 1.338c0.159 0.41 0.349 1.025 0.401 2.16 0.056 1.227 0.068 1.595 0.068 4.701s-0.012 3.474-0.068 4.701c-0.052 1.135-0.241 1.75-0.401 2.16-0.211 0.543-0.463 0.93-0.871 1.337s-0.794 0.659-1.337 0.87c-0.41 0.16-1.026 0.349-2.16 0.401-1.227 0.056-1.595 0.068-4.702 0.068s-3.475-0.012-4.702-0.068c-1.135-0.052-1.75-0.242-2.161-0.401-0.543-0.211-0.931-0.463-1.338-0.87s-0.659-0.794-0.871-1.337c-0.159-0.41-0.349-1.025-0.401-2.16-0.056-1.227-0.067-1.595-0.067-4.703s0.011-3.474 0.067-4.701c0.052-1.135 0.241-1.75 0.401-2.16 0.211-0.543 0.463-0.931 0.871-1.338s0.795-0.659 1.338-0.871c0.41-0.16 1.026-0.349 2.161-0.401 1.073-0.048 1.489-0.063 3.658-0.065v0.003zM16.001 10.024c-3.3 0-5.976 2.676-5.976 5.976s2.676 5.975 5.976 5.975c3.3 0 5.975-2.674 5.975-5.975s-2.675-5.976-5.975-5.976zM16.001 12.121c2.142 0 3.879 1.736 3.879 3.879s-1.737 3.879-3.879 3.879c-2.142 0-3.879-1.737-3.879-3.879s1.736-3.879 3.879-3.879zM22.212 8.393c-0.771 0-1.396 0.625-1.396 1.396s0.625 1.396 1.396 1.396 1.396-0.625 1.396-1.396c0-0.771-0.625-1.396-1.396-1.396v0.001z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="" class="bg-white p-1 rounded-md">
+                            <svg class="fill-dark-blue" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 28 28">
+                                <path
+                                    d="M18.578 20.422l2.297-10.828c0.203-0.953-0.344-1.328-0.969-1.094l-13.5 5.203c-0.922 0.359-0.906 0.875-0.156 1.109l3.453 1.078 8.016-5.047c0.375-0.25 0.719-0.109 0.438 0.141l-6.484 5.859-0.25 3.563c0.359 0 0.516-0.156 0.703-0.344l1.687-1.625 3.5 2.578c0.641 0.359 1.094 0.172 1.266-0.594zM28 14c0 7.734-6.266 14-14 14s-14-6.266-14-14 6.266-14 14-14 14 6.266 14 14z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="" class="bg-white p-1 rounded-md">
+                            <svg class="fill-dark-blue" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                width="20" height="20" viewBox="0 0 16 16">
+                                <path
+                                    d="M15 2h-14c-0.55 0-1 0.45-1 1v10c0 0.55 0.45 1 1 1h14c0.55 0 1-0.45 1-1v-10c0-0.55-0.45-1-1-1zM5.831 9.773l-3 2.182c-0.1 0.073-0.216 0.108-0.33 0.108-0.174 0-0.345-0.080-0.455-0.232-0.183-0.251-0.127-0.603 0.124-0.786l3-2.182c0.251-0.183 0.603-0.127 0.786 0.124s0.127 0.603-0.124 0.786zM13.955 11.831c-0.11 0.151-0.282 0.232-0.455 0.232-0.115 0-0.23-0.035-0.33-0.108l-3-2.182c-0.251-0.183-0.307-0.534-0.124-0.786s0.535-0.307 0.786-0.124l3 2.182c0.251 0.183 0.307 0.535 0.124 0.786zM13.831 4.955l-5.5 4c-0.099 0.072-0.215 0.108-0.331 0.108s-0.232-0.036-0.331-0.108l-5.5-4c-0.251-0.183-0.307-0.534-0.124-0.786s0.535-0.307 0.786-0.124l5.169 3.759 5.169-3.759c0.251-0.183 0.603-0.127 0.786 0.124s0.127 0.603-0.124 0.786z">
+                                </path>
+                            </svg>
+                        </a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </header>
+    <div>
+       
+    </div>
+    <main ondrag="" id="main">
+        <section class="bg-light-gray dark:bg-black pb-10">
+            <div class="flex items-end justify-center container bg-cover w-full h-[90vh] max-h-[800px] bg-hero">
+                <button
+                    class="mb-16 bg-dark-blue py-4 h-max px-10 text-white font-semibold rounded-md hover:text-dark-blue hover:bg-white duration-300 dark:bg-black dark:hover:bg-white">
+                    <a href="tel:+998946666988" class="after:content-['&#8594']x after:h-2">
+                        BOG'LANISH
+                    </a>
+                </button>
+            </div>
+        </section>
+        <section class="dark:bg-slate-200">
+            <div
+                class="container flex flex-col gap-10 items-center pt-28 dark:pb-10 font-semibold text-dark-blue dark:text-black text-2xl text-center">
+                <h1 class="text-3xl">Bizning mahsulotlar</h1>
+                <div class="flex flex-col lg:flex-row gap-5 items-center">
+                    <div class="flex flex-col items-center dark:gap-5">
+                        <img src="./images/Untitled-design-13.png" alt=""
+                            class="lg:w-[600px] lg:h-[300px] hover:scale-[1.1] duration-300">
+                        <h1
+                            class="h-16 lg:h-28 flex items-center justify-center bg-light-gray w-11/12 dark:bg-black  dark:text-white">
+                            PVH yoki alyumindan eshik va
+                            oynalar</h1>
+                    </div>
+                    <div class="flex flex-col items-center dark:gap-5">
+                        <img src="./images/Untitled-design-14-removebg-preview.png" alt=""
+                            class="lg:w-[600px] lg:h-[300px] hover:scale-[1.1] duration-300">
+                        <h1
+                            class="h-16 lg:h-28 flex items-center justify-center bg-light-gray w-11/12 dark:bg-black dark:text-white">
+                            Qalin shishalik peregorodkalar
+                        </h1>
+                    </div>
+                    <div class="flex flex-col items-center dark:gap-5">
+                        <img src="./images/1-1024x1024.png" alt=""
+                            class="lg:w-[600px] lg:h-[300px] hover:scale-[1.1] duration-300">
+                        <h1
+                            class="h-16 lg:h-28 flex items-center justify-center bg-light-gray w-11/12 dark:bg-black dark:text-white">
+                            Podokonniklar</h1>
+                    </div>
+                    <div class="flex flex-col items-center dark:gap-5">
+                        <img src="./images/2-1024x1024.png" alt=""
+                            class="lg:w-[600px] lg:h-[300px] hover:scale-[1.1] duration-300">
+                        <h1
+                            class="h-16 lg:h-28 flex items-center justify-center bg-light-gray w-11/12 dark:bg-black dark:text-white">
+                            Moskitniy setkalar</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-light-gray dark:bg-black">
+            <div
+                class="container flex flex-col lg:flex-row justify-around items-center lg:text-start my-10 dark:my-0 text-dark-blue font-semibold py-6 dark:text-white gap-10">
+                <div class="flex flex-col gap-5 lg:w-1/2">
+                    <h1 class="text-3xl text-center lg:text-start">Biz haqimizda</h1>
+                    <p class="text-center lg:text-start">«RUSTAM PROFIL» xususiy korxonasi 2017 yilda tashkil topgan
+                        bo’lib, bugungi kunda qurilish sohasida kerakli bo’lgan profnastil,
+                        gipsokarton uchun profillar ishlab chiqarish bilan bir qatorda
+                        alyumin yoki plastik eshik va oynalar yasash va o’rnatish ishlarini
+                        ham amalga oshirib kelmoqda. Xizmatlar katta tajribaga ega bo’lgan
+                        mutaxassislar tomonidan bajariladi. Mahsulotlarimiz sifatli bo’lishi
+                        uchun biz yurtimizda mashxur bo’lgan AKFA, IMZO va ENGELBERG
+                        kabi brendga ega profillarini ishlatamiz</p>
+                </div>
+                <div>
+                    <img src="./images/cropped-photo_2023-04-05_12-46-59-removebg-preview.png" alt=""
+                        class="inline-block dark:hidden">
+                    <img src="./images/cropped-photo_2023-04-05_12-46-59-removebg-preview1.png" alt=""
+                        class="dark:inline-block hidden">
+                </div>
+            </div>
+        </section>
+        <section class="container m-auto dark:bg-black mt-5">
+            <div class="flex flex-col justify-between items-center gap-12">
+                <h1 class="font-semibold lg:text-3xl text-2xl text-dark-blue text-center  dark:text-white lg:w-1/2 w-full">Nega bizni
+                    tanlashingiz kerak?</h1>
+                <div class="flex lg:flex-row flex-col items-center lg:items-start justify-between lg:gap-5 gap-10">
+                    <div class="flex flex-col md:flex-row gap-5">
+                        <div class="flex flex-col gap-3 items-center">
+                            <div>
+                                <img src="./images/group-2.png" alt="" class="w-16 dark:hidden hover:scale-[1.1] duration-300">
+                                <img src="./images/group-2-dark.png" alt="" class="w-16 hidden dark:inline-block hover:scale-[1.1] duration-300">
+                            </div>
+                            <h1 class="font-semibold text-dark-blue text-xl dark:text-white">Individual yondashuv</h1>
+                            <p class="text-center lg:w-[300px] text-dark-blue dark:text-white">Xizmatlar katta tajribaga ega bo’lgan
+                                mutaxassislar tomonidan bajariladi</p>
+                        </div>
+                        <div class="flex flex-col gap-3 items-center">
+                            <div>
+                                <img src="./images/group-2.png" alt="" class="w-16 dark:hidden hover:scale-[1.1] duration-300">
+                                <img src="./images/group-2-dark.png" alt="" class="w-16 hidden dark:inline-block hover:scale-[1.1] duration-300">
+                            </div>
+                            <h1 class="font-semibold text-dark-blue text-xl dark:text-white">Tezlik</h1>
+                            <p class="text-center lg:w-[200px] text-dark-blue dark:text-white">
+                                Har bir mijoz individual yondashuvga ega
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-5">
+                        <div class="flex flex-col gap-3 items-center">
+                            <div>
+                                <img src="./images/group-2.png" alt="" class="w-16 dark:hidden hover:scale-[1.1] duration-300">
+                                <img src="./images/group-2-dark.png" alt="" class="w-16 hidden dark:inline-block hover:scale-[1.1] duration-300">
+                            </div>
+                            <h1 class="font-semibold text-dark-blue text-xl dark:text-white">Boshqaruv</h1>
+                            <p class="text-center lg:w-[250px] text-dark-blue dark:text-white">Ishlar kelishilgan muddatdan kechiktirmay
+                                yakunlanadi
+
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-3 items-center">
+                            <img src="./images/group-2.png" alt="" class="w-16 dark:hidden  hover:scale-[1.1] duration-300">
+                            <img src="./images/group-2-dark.png" alt="" class="w-16 hidden dark:inline-block hover:scale-[1.1] duration-300">
+                            <h1 class="font-semibold text-dark-blue text-xl dark:text-white">Tajriba</h1>
+                            <p class="text-center lg:w-[330px] text-dark-blue dark:text-white">
+                                Dizayndan tortib to o'rnatishgacha sifatli
+                                amalga oshirilishi nazorat qilinadi va ta'minlanadi
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-light-gray mt-5 dark:bg-black">
+            <div class="  px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-8">
+                <div class="flex flex-col items-center justify-around w-full mb-5 lg:flex-row">
+                    <div class=" lg:mb-0 lg:max-w-lg lg:pr-5 relative top-10 lg:top-24">
+                        <div class="max-w-x">
+                            <p
+                                class=" dark:text-white text-base text-center font-semibold text-dark-blue lg:text-xl  font-sans1">
+                                Bizning
+                                korxonada turli hil o'lchamdagi eshik va oynalar ishlab chiqariladi. Undan tashqari,
+                                hozirgi zamonaviy
+                                ofislar uchun xonalarda devor o'rniga qalin shishalar yasash va o’rnatish xizmatlari ham
+                                mavjud.</p>
+                        </div>
+                        <div class="lg:mt-20 lg:mb-20 mt-8 mb-4 flex justify-center items-center space-x-3">
+                            <div class="flex justify-center items-center">
+                                <button
+                                    class="mb-16 bg-dark-blue dark:bg-white dark:text-black dark:hover:bg-black  dark:hover:text-white py-4 h-max px-10 text-white font-semibold rounded-md hover:text-dark-blue hover:bg-white duration-300">
+                                    <a href="tel:+998946666988" class="after:content-['&#8594'] after:h-2">
+                                        BOG'LANISH
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class=" flex items-center justify-center lg:w-1/3 cursor-pointer hover:scale-[1.1] duration-300">
+                        <div class="statImg"><img src="images/img.jpeg" alt="smth" class="rounded-xl"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-light-gray mt-8 dark:mt-0 dark:pt-8 dark:bg-black">
+            <div class="  px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-8">
+                <div class="flex flex-col items-center justify-around w-full mb-5 lg:flex-row">
+                    <div
+                        class=" flex items-center justify-center lg:w-2/5 cursor-pointer hover:scale-[1.1] duration-300">
+                        <div class="statImg"><img src="images/img2.jpeg" alt="smth" class="rounded-xl"></div>
+                    </div>
+                    <div class=" lg:mb-0 lg:max-w-lg lg:pr-5 relative top-10 lg:top-24">
+
+                        <div class="max-w-x">
+                            <p
+                                class=" dark:text-white text-base text-center font-semibold text-dark-blue lg:text-xl  font-sans1">
+                                Kompaniyamiz topshiriqni tez va o'z vaqtida bajarish
+                                , yuqori sifatli bajarish, ramkalar uchun eng yaxshi sifat,
+                                xomashyodan foydalanish va
+                                qulay shart-sharoitlarga ega mijozlarga mas'uldir</p>
+                        </div>
+                        <div class="lg:mt-20 lg:mb-20 mt-8 mb-4 flex justify-center items-center space-x-3">
+                            <div class="flex justify-center items-center">
+                                <button
+                                    class="mb-16 bg-dark-blue dark:bg-white dark:text-black dark:hover:text-white dark:hover:bg-black py-4 h-max px-10 text-white font-semibold rounded-md hover:text-dark-blue hover:bg-white duration-300">
+                                    <a href="tel:+998946666988" class="after:content-['&#8594'] after:h-2">
+                                        BOG'LANISH
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="dark:bg-black">
+            <div
+                class="container flex flex-col items-center justify-center gap-10 mt-9 dark:mt-0 dark:pt-9 lg:flex-row lg:gap-28">
+                <div class=" flex flex-col gap-5 lg:w-1/5 justify-center items-center">
+                    <svg aria-hidden="true" class="fill-dark-blue flex  w-[80px] lg:w-1/6 items-center dark:fill-white hover:scale-[1.1] duration-300"
+                        viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z">
+                        </path>
+                    </svg>
+                    <h1 class="text-2xl  dark:text-white">Elektron pochta</h1>
+                    <p class="w-[280px]  text-center dark:text-white">Barcha savollaringizni elektron pochta
+                        manzilimizga yuborishingiz
+                        mumkin</p>
+                    <a href="mail:juraev.shuhrat1988@gmail.com"
+                        class="text-blue1 underline dark:text-blue-300">juraev.shuhrat1988@gmail.com</a>
+                </div>
+                <div class="flex flex-col gap-3 lg:w-1/5 justify-center items-center">
+                    <svg aria-hidden="true" class="w-[80px] lg:w-1/6 fill-dark-blue items-center dark:fill-white hover:scale-[1.1] duration-300"
+                        viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M97.333 506.966c-129.874-129.874-129.681-340.252 0-469.933 5.698-5.698 14.527-6.632 21.263-2.422l64.817 40.513a17.187 17.187 0 0 1 6.849 20.958l-32.408 81.021a17.188 17.188 0 0 1-17.669 10.719l-55.81-5.58c-21.051 58.261-20.612 122.471 0 179.515l55.811-5.581a17.188 17.188 0 0 1 17.669 10.719l32.408 81.022a17.188 17.188 0 0 1-6.849 20.958l-64.817 40.513a17.19 17.19 0 0 1-21.264-2.422zM247.126 95.473c11.832 20.047 11.832 45.008 0 65.055-3.95 6.693-13.108 7.959-18.718 2.581l-5.975-5.726c-3.911-3.748-4.793-9.622-2.261-14.41a32.063 32.063 0 0 0 0-29.945c-2.533-4.788-1.65-10.662 2.261-14.41l5.975-5.726c5.61-5.378 14.768-4.112 18.718 2.581zm91.787-91.187c60.14 71.604 60.092 175.882 0 247.428-4.474 5.327-12.53 5.746-17.552.933l-5.798-5.557c-4.56-4.371-4.977-11.529-.93-16.379 49.687-59.538 49.646-145.933 0-205.422-4.047-4.85-3.631-12.008.93-16.379l5.798-5.557c5.022-4.813 13.078-4.394 17.552.933zm-45.972 44.941c36.05 46.322 36.108 111.149 0 157.546-4.39 5.641-12.697 6.251-17.856 1.304l-5.818-5.579c-4.4-4.219-4.998-11.095-1.285-15.931 26.536-34.564 26.534-82.572 0-117.134-3.713-4.836-3.115-11.711 1.285-15.931l5.818-5.579c5.159-4.947 13.466-4.337 17.856 1.304z">
+                        </path>
+                    </svg>
+                    <h1 class="text-2xl text-center dark:text-white ">Telefon</h1>
+                    <p class="w-[280px]  text-center dark:text-white">Buyurtma berish uchun quyidagi raqamlarimizga
+                        qo'ng'iroq qiling.
+                    </p>
+                    <a href="tel:+998909089477" class="text-blue1 underline dark:text-blue-300 text-center">+998 90 908
+                        94 77</a>
+                    <a href="tel:+998946666988" class="text-blue1 underline dark:text-blue-300 text-center">+998 94 666
+                        69 88</a>
+                </div>
+                <div class="flex flex-col gap-3 lg:w-1/5 justify-center items-center">
+                    <svg aria-hidden="true"
+                        class="e-font-icon-svg e-fas-map-marker-alt fill-dark-blue dark:fill-white w-[80px] lg:w-1/6 hover:scale-[1.1] duration-300"
+                        viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z">
+                        </path>
+                    </svg>
+                    <h1 class="text-2xl text-center dark:text-white ">Bizning manzil</h1>
+                    <p class="w-[280px]  text-center dark:text-white">Bizning manzilimizga soat 09:00 dan 19:00 gacha
+                        tashrif buyurishingiz mumkin
+                    </p>
+                    <a href="tel:+998909089477" class="text-blue1 underline dark:text-blue-300 text-center">Toshkent
+                        sh., Mirzo
+                        Ulug‘bek tumani,</a>
+                    <a href="tel:+998946666988" class="text-blue1 underline dark:text-blue-300 text-center">Alisherobod
+                        MFP, Nurli
+                        Zamina ko‘chasi</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="dark:bg-black">
+        <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d374.5188739221013!2d69.41327005101944!3d41.327329938154186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1705868632455!5m2!1sru!2s" 
+                    class="w-full h-[550px]" allowfullscreen="" loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="container flex flex-col items-center gap-10 pb-10">
+            <div
+                class="container flex flex-col justify-center items-center gap-5 mt-10 dark:mt-0 dark:pt-10 px-7 lg:flex-row lg:gap-28">
+                <div>
+                    <img src="./images/cropped-photo_2023-04-05_12-46-59-removebg-preview.png" alt=""
+                        class="w-[145px] dark:hidden  hover:scale-[1.1] duration-300">
+                    <img src="./images/cropped-photo_2023-04-05_12-46-59-removebg-preview1.png" alt=""
+                        class="hidden dark:inline-block w-[145px] hover:scale-[1.1] duration-300">
+                </div>
+                <p class="text-center w-[350px] dark:text-white">г.Ташкент, Мирзо-Улугбекский район, Алишерабадский МФУ,
+                    улица Нурли замина, 83-А
+                </p>
+                <div class="flex flex-col">
+                    <a href="tel:+998909089477" class="text-blue1 underline dark:text-blue-300">+998 90 908 94 77</a>
+                    <a href="tel:+998946666988" class="text-blue1 underline dark:text-blue-300">+998 94 666 69 88</a>
+                </div>
+            </div>
+            <p class="text-xs text-gray-400"> © 2024 Eshikoyna.Uz | Powered By <a href=""
+                    class="text-blue1 underline dark:text-blue-300">Taskin Agency</a></p>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>
